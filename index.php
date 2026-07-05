@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translucent Nav & Video Header</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            /* Set body background to black */
+            color: #fff;
+            /* Set default text to white */
+            line-height: 1.6;
+        }
+
+        /* Translucent Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            /* Safari support */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00d2ff;
+        }
+
+        /* Video Header Container */
+        .video-header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* The actual video element */
+        .video-header video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Overlay to darken video slightly for text readability */
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Slightly darker for better text contrast */
+            z-index: 0;
+        }
+
+        /* Content inside the header */
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 0 20px;
+            max-width: 900px;
+            /* Limits width to keep the long sentence clean */
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Main Content Section Below Header */
+        .main-content {
+            background-color: #000000;
+            /* Strict black background */
+            padding: 60px 20px 90px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Search Bar Wrapper */
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 50px;
+        }
+
+        .search-form {
+            display: flex;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.05);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .search-form:focus-within {
+            border-color: #00d2ff;
+            box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+        }
+
+        .search-input {
+            flex: 1;
+            background: none;
+            border: none;
+            padding: 15px 25px;
+            font-size: 16px;
+            color: #fff;
+            outline: none;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .search-button {
+            background-color: #00d2ff;
+            color: #000;
+            border: none;
+            padding: 0 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-button:hover {
+            background-color: #00b4db;
+        }
+
+        /* Lorem Ipsum Paragraph */
+        .lorem-paragraph {
+            max-width: 800px;
+            color: #ffffff;
+            /* Explicit white text */
+            font-size: 1.1rem;
+            text-align: justify;
+            opacity: 0.9;
+            /* Slightly softer white for comfortable reading */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .header-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .search-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Translucent Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" class="logo">MyLogo</a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fullscreen Video Header -->
+    <header class="video-header">
+        <video autoplay loop muted playsinline>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="video-overlay"></div>
+
+        <div class="header-content">
+            <!-- Updated overlay statement -->
+            <h1>setting the global standard for world class wire and cable</h1>
+        </div>
+    </header>
+
+    <!-- Black Background Content Area -->
+    <main class="main-content">
+
+        <!-- Search Bar Component -->
+        <div class="search-container">
+            <form class="search-form" action="#" method="GET">
+                <input type="text" class="search-input" placeholder="Search products, specifications, or industries..."
+                    aria-label="Search">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+
+        <!-- White Text Lorem Ipsum Paragraph -->
+        <p class="lorem-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+        </p>
+
+    </main>
+
+</body>
+
+</html>
