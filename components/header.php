@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,19 +31,8 @@
             align-items: center;
             padding: 20px 50px;
             z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #fff;
-            text-decoration: none;
         }
 
         .nav-links {
@@ -87,7 +76,7 @@
             width: auto;
             height: auto;
             transform: translate(-50%, -50%);
-            object-fit: cover; 
+            object-fit: cover;
             z-index: -1;
         }
 
@@ -115,7 +104,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             line-height: 1.2;
-            text-shadow: 2px 2px 12px rgba(0,0,0,0.8);
+            text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
         }
 
         /* Main Content Section */
@@ -191,27 +180,32 @@
             .navbar {
                 padding: 15px 20px;
             }
+
             .header-content h1 {
                 font-size: 2.2rem;
             }
+
             .nav-links {
-                display: none; 
+                display: none;
             }
+
             .search-container {
                 max-width: 100%;
             }
         }
     </style>
 </head>
+
 <body>
 
-<nav class="navbar">
-    <a href="index.php" class="logo">MyLogo</a>
-    
-    <ul class="nav-links">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="About.php">About</a></li>
-        <li><a href="products.php">Services</a></li>
-        <li><a href="contact-us.php">Contact</a></li>
-    </ul>
-</nav>
+    <nav class="navbar">
+        <a href="index.php" <img src="#">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="About.php">About</a></li>
+            <li><a href="products.php">Services</a></li>
+            <li><a href="contact-us.php">Contact</a></li>
+        </ul>
+    </nav>
