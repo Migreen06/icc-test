@@ -204,13 +204,13 @@
     </style>
 </head>
 <body>
-    
+
 <nav class="navbar">
     <a href="index.php" class="logo">MyLogo</a>
     
     <ul class="nav-links">
         <li><a href="index.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
+        <li><a href="About.php">About</a></li>
         <li><a href="services.php">Services</a></li>
         <li><a href="contact.php">Contact</a></li>
     </ul>
