@@ -205,7 +205,7 @@
         <ul class="nav-links">
             <li><a href="index.php">Home</a></li>
             <li><a href="About.php">About</a></li>
-            <li><a href="products.php">Services</a></li>
-            <li><a href="contact-us.php">Contact</a></li>
+            <li><a href="products.php">Products</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ul>
     </nav>
