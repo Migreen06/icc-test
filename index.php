@@ -1,6 +1,6 @@
 <?php 
     // Set a dynamic page title before including the header
-    $pageTitle = "Global Wire & Cable Standards"; 
+    $pageTitle = "ICC Cable Corp."; 
     
     // Include the translucent navigation and document head
     include('components/header.php'); 
